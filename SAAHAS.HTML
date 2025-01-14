@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Saahas!</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: url('https://www.w3schools.com/w3images/forest.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        .container {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 30px;
+            border-radius: 15px;
+            width: 60%;
+            text-align: center;
+            color: white;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        h1 {
+            font-size: 3em;
+            color: #FFD700;
+            animation: slideIn 1.5s ease-in-out;
+        }
+
+        p {
+            font-size: 1.5em;
+            margin: 20px 0;
+            line-height: 1.5;
+            animation: fadeInText 3s ease-in-out;
+        }
+
+        .quiz {
+            margin-top: 30px;
+            animation: fadeInQuiz 3s ease-in-out;
+        }
+
+        .quiz h2 {
+            font-size: 2em;
+            margin-bottom: 10px;
+            font-family: 'Verdana', sans-serif;
+            animation: zoomIn 2s ease-in-out;
+        }
+
+        .quiz button {
+            padding: 15px;
+            margin: 10px;
+            background-color: #FF6347;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.2em;
+            cursor: pointer;
+            color: white;
+            transition: background-color 0.3s;
+        }
+
+        .quiz button:hover {
+            background-color: #FF4500;
+        }
+
+        .message {
+            font-size: 2em;
+            color: #32CD32;
+            margin-top: 20px;
+            display: none;
+            animation: fadeInMessage 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(-20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes slideIn {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(0); }
+        }
+
+        @keyframes fadeInText {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes fadeInQuiz {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes zoomIn {
+            0% { transform: scale(0.5); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        @keyframes fadeInMessage {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Happy Birthday Saahas!</h1>
+        <p>Bhai, tere bina game khelne ma maja nahi aata. Minecraft mein tere saath khelkar hamesha maza aata hai. Wishing you the best birthday ever! May this year bring you tons of happiness and fun times ahead!</p>
+
+        <div class="quiz">
+            <h2>Quiz Time: When is my birthday?</h2>
+            <button onclick="checkAnswer('2 March')">2 March</button>
+            <button onclick="checkAnswer('4 May')">4 May</button>
+            <button onclick="checkAnswer('2 May')">2 May</button>
+            <button onclick="checkAnswer('5th April')">5th April</button>
+        </div>
+
+        <div id="message" class="message">Bhai H Tu Mera! 🎉</div>
+    </div>
+
+    <script>
+        function checkAnswer(answer) {
+            if (answer === '2 May') {
+                document.getElementById('message').style.display = 'block'; // Display the message
+            } else {
+                alert('Oops! That\'s not it, try again!');
+            }
+        }
+    </script>
+</body>
+</html>
